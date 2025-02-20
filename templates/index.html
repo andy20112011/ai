@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Local Tiktokenizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Left: User Input -->
+    <div class="input-section">
+      <h2>Input</h2>
+      <!-- We use a contenteditable div so we can wrap each character in a span -->
+      <div id="inputText" contenteditable="true" dir="ltr" placeholder="Type or paste your text here..."></div>
+    </div>
+
+    <!-- Right: Tokenization Result -->
+    <div class="output-section">
+      <h2>Tokenization</h2>
+      <div id="tokenCount">Token Count: 0</div>
+<div id="tokensDisplay">
+  <h3>Tokenized Words:</h3>
+  <!-- Token words will be inserted here -->
+</div>
+<div id="tokenIdsDisplay">
+  <h3>Token IDs:</h3>
+  <!-- Token numbers will be inserted here -->
+</div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

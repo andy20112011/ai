@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, jsonify
 import tiktoken
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../static", template_folder="../templates")
 
 # Initialize the cl100k_base encoding
 enc = tiktoken.get_encoding("o200k_base")
